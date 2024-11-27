@@ -11,7 +11,7 @@ $API = new RouterosAPI();
 function getActiveVPNUsers($API) {
     $active_users = array();
 
-    if ($API->connect('103.100.27.198', 'nopen', 'TamanS1s54!125#')) {
+    if ($API->connect('<ip-mikrotik>', '<user-mikrotik>', '<password-mikrotik>')) {
         $active_connections = $API->comm("/ppp/active/print");
 
         foreach ($active_connections as $connection) {
