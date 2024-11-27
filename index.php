@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 session_start();
 
 // Koneksi ke PostgreSQL
-$conn = pg_connect("host=localhost dbname=admin_vpn user=postgres password=dbApiMikrotik2024!");
+$conn = pg_connect("host=localhost dbname=<nama-database> user=<user-database> password=<password-database>");
 if (!$conn) {
     die("Koneksi gagal: " . pg_last_error());
 }
