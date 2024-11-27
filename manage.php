@@ -11,9 +11,9 @@ if (!isset($_SESSION['loggedin'])) {
 require('routeros_api.class.php');
 
 // Koneksi ke Mikrotik
-$host = '103.100.27.198';
-$user = 'WEB-VPN';
-$password = 'WEB4P1VPN2024';
+$host = '<ip-mikrotik>';
+$user = '<user-mikrotik>';
+$password = '<password-user-mikrotik>';
 
 $api = new RouterosAPI();
 if (!$api->connect($host, $user, $password)) {
@@ -23,9 +23,9 @@ if (!$api->connect($host, $user, $password)) {
 // Koneksi ke PostgreSQL
 $dbHost = 'localhost';
 $dbPort = '5432';
-$dbName = 'vpn_elite_global';
-$dbUser = 'postgres';
-$dbPassword = 'dbApiMikrotik2024!';
+$dbName = '<nama-database>';
+$dbUser = '<user-database>';
+$dbPassword = '<password-database>';
 $conn = pg_connect("host=$dbHost port=$dbPort dbname=$dbName user=$dbUser password=$dbPassword");
 if (!$conn) {
     die('Koneksi ke database PostgreSQL gagal.');
